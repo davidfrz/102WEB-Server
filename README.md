@@ -9,11 +9,10 @@
 
 配置tomcat服务器
 
-![1](.\img\1.png)
+<img src="./img/1.png"  >
 
-![2](.\img\2.png)
+<img src="./img/2.png"  >
 
-![3](.\img\3.png)
+<img src="./img/3.png"  >
 
-![4](.\img\4.png)
-
+<img src="./img/4.png"  >

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.davidfrz.ssm.dao.MqttSsmDao">
+
+    <insert id="saveOne">
+        insert into test(imei,lng,lat,time) values(#{imei},#{lng},#{lat},#{time})
+    </insert>
+
+    <select id="getByTimeAndImei" resultType="map" >
+        select * from test where imei = #{imei} and time between #{stime} and #{etime}
+    </select>
+
+    <select id="getOneByTimeAndImei" resultType="map" >
+        SELECT * FROM test where imei = #{imei} and time = (SELECT MAX(time) as ti from test WHERE imei = #{imei})
+    </select>
+
+</mapper>
